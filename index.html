@@ -57,9 +57,6 @@
 
     footer { background:#061522; color:#9fb3c3; font-size:13px; padding:28px 0; }
 
-    /* Statusleiste für den Test, kann gelöscht werden */
-    #qstatus { position:fixed; left:12px; bottom:12px; z-index:60; background:#111; color:#9f9;
-               font:12px/1.4 monospace; padding:8px 10px; border-radius:4px; white-space:pre; }
     @media (max-width:800px){ .selector{grid-template-columns:1fr} .hero h1{font-size:32px} nav{display:none} }
   </style>
 </head>
@@ -168,20 +165,8 @@
   <div class="wrap">Demo-Mockup zu Testzwecken. Kein Bestandteil der Infineon-Webseite. Marken und Produktnamen gehören ihren Inhabern.</div>
 </footer>
 
-<div id="qstatus">Qualified: prüfe ...</div>
-
 <!-- Qualified: identisch zur funktionierenden Testseite, ganz am Ende des body -->
 <script>(function(w,q){w['QualifiedObject']=q;w[q]=w[q]||function(){(w[q].q=w[q].q||[]).push(arguments)};})(window,'qualified')</script>
 <script async src="https://js.qualified.com/qualified.js?token=ED5vfALhKZynK8HR"></script>
-
-<script>
-  // Nur Anzeige für den Test
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      document.getElementById('qstatus').textContent =
-        'Qualified: ' + typeof window.qualified + '\nHost: ' + (location.host || 'file://');
-    }, 1500);
-  });
-</script>
 </body>
 </html>
